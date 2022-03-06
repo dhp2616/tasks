@@ -2,6 +2,7 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
+PASS src/nested.test.ts
 FAIL src/arrays.test.ts
   ● Testing the array functions › Testing the injectPositive function
 
@@ -39,18 +40,20 @@ PASS src/App.test.tsx
 ----------------|---------|----------|---------|---------|-------------------
 File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------|---------|----------|---------|---------|-------------------
-All files       |    93.7 |    96.29 |   93.02 |   94.26 |                   
- src            |    93.7 |    96.29 |   93.02 |   94.26 |                   
+All files       |   95.43 |     96.1 |   96.15 |   95.81 |                   
+ src            |   95.43 |     96.1 |   96.15 |   95.81 |                   
   App.tsx       |     100 |      100 |     100 |     100 |                   
   arrays.ts     |   89.39 |    95.65 |   88.46 |   90.16 | 143-152           
   functions.ts  |     100 |      100 |     100 |     100 |                   
+  nested.ts     |   98.57 |    95.65 |     100 |   98.55 | 48                
   objects.ts    |   97.36 |    94.11 |     100 |   97.36 | 61                
  src/interfaces |       0 |        0 |       0 |       0 |                   
+  answer.ts     |       0 |        0 |       0 |       0 |                   
   question.ts   |       0 |        0 |       0 |       0 |                   
 ----------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 1 failed, 5 passed, 6 total
-Tests:       1 failed, 32 passed, 33 total
+Test Suites: 1 failed, 6 passed, 7 total
+Tests:       1 failed, 48 passed, 49 total
 Snapshots:   0 total
-Time:        3.702 s
+Time:        4.336 s
 Ran all test suites.
