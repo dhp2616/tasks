@@ -49,11 +49,45 @@ PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
+PASS src/quizzer/Quizzer.test.tsx
 PASS src/App.test.tsx
+  ● Console
+
+    console.error
+      Warning: validateDOMNesting(...): <span> cannot appear as a child of <html>.
+          at span
+          at html
+          at div
+          at App
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+
+    console.error
+      Warning: validateDOMNesting(...): <html> cannot appear as a child of <div>.
+          at html
+          at div
+          at App
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   96.75 |    95.41 |   97.77 |      97 |                   
+All files                    |   96.76 |    95.41 |   97.79 |      97 |                   
  src                         |   94.92 |     96.1 |    96.1 |   95.28 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
   arrays.ts                  |   89.39 |    95.65 |   88.46 |   90.16 | 143-152           
@@ -81,10 +115,43 @@ All files                    |   96.75 |    95.41 |   97.77 |      97 |
  src/interfaces              |       0 |        0 |       0 |       0 |                   
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
+ src/quizzer                 |     100 |      100 |     100 |     100 |                   
+  Quizzer.tsx                |     100 |      100 |     100 |     100 |                   
 -----------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 1 failed, 19 passed, 20 total
-Tests:       1 failed, 133 passed, 134 total
+Summary of all failing tests
+FAIL src/arrays.test.ts
+  ● Testing the array functions › Testing the injectPositive function
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Array [
+        100,
+        199,
+        1,
+        -5,
+    -   300,
+        7,
+        3,
+    +   305,
+      ]
+
+      267 |         expect(injectPositive(NUMBERS_3)).toEqual([5, 5]);
+      268 |         expect(injectPositive(NUMBERS_4)).toEqual([0]);
+    > 269 |         expect(injectPositive(NUMBERS_5)).toEqual([100, 199, 1, -5, 300, 7, 3]);
+          |                                           ^
+      270 |         expect(injectPositive(NUMBERS_6)).toEqual([-100, 0, -200, 100, 200]);
+      271 |         expect(injectPositive(NUMBERS_7)).toEqual([199, 1, 550, 50, 200, 1000]);
+      272 |     });
+
+      at Object.<anonymous> (src/arrays.test.ts:269:43)
+
+
+Test Suites: 1 failed, 20 passed, 21 total
+Tests:       1 failed, 134 passed, 135 total
 Snapshots:   0 total
-Time:        15.519 s
+Time:        11.867 s
 Ran all test suites.
