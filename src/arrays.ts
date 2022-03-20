@@ -137,27 +137,49 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    const isNeg = values.map((num: number): boolean => num > 0);
-    const arr = [...values];
-    if (!isNeg) {
-        const find_negative = values.findIndex((n: number): boolean => n < 0);
-        const filtered_array = arr.filter(
-            (n: number): boolean =>
-                arr.indexOf(n) < arr.indexOf(find_negative) - 2
+    const temp = [...values];
+    const Positive = values.every((price: number): boolean => price > 0);
+    if (!Positive) {
+        const findNeg = temp.findIndex((value: number): boolean => value < 0);
+        const Neg = temp.filter(
+            (value: number): boolean =>
+                temp.indexOf(value) < temp.indexOf(findNeg) - 2
         );
-        const total = filtered_array.reduce(
-            (total: number, num: number) => total + num,
+        const sum = Neg.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
             0
         );
-        return values.splice(find_negative + 1, 0, total);
-    } else {
-        let count_for_none = 0;
-        values.map(
-            (n: number): number => (count_for_none = count_for_none + n)
-        );
-        return [...values, count_for_none];
+        temp.splice(findNeg + 1, 0, sum);
+        return temp;
     }
+    const sum = values.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    return [...values, sum];
 }
+
+//     const isNeg = values.map((num: number): boolean => num > 0);
+//     const arr = [...values];
+//     if (!isNeg) {
+//         const find_negative = values.findIndex((n: number): boolean => n < 0);
+//         const filtered_array = arr.filter(
+//             (n: number): boolean =>
+//                 arr.indexOf(n) < arr.indexOf(find_negative) - 2
+//         );
+//         const total = filtered_array.reduce(
+//             (total: number, num: number) => total + num,
+//             0
+//         );
+//         return values.splice(find_negative + 1, 0, total);
+//     } else {
+//         let count_for_none = 0;
+//         values.map(
+//             (n: number): number => (count_for_none = count_for_none + n)
+//         );
+//         return [...values, count_for_none];
+//     }
+// }
 /**
     let total = 0;
     let count = 0;
