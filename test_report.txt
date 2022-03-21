@@ -59,12 +59,12 @@ PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   99.02 |    96.18 |     100 |      99 |                   
- src                         |   98.47 |     97.4 |     100 |   98.42 |                   
+All files                    |   99.35 |    96.18 |     100 |   99.33 |                   
+ src                         |   98.98 |     97.4 |     100 |   98.95 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
   functions.ts               |     100 |      100 |     100 |     100 |                   
-  nested.ts                  |   97.18 |    95.65 |     100 |   97.14 | 48-50             
+  nested.ts                  |   98.59 |    95.65 |     100 |   98.57 | 49                
   objects.ts                 |   97.36 |    94.11 |     100 |   97.36 | 61                
  src/bad-components          |     100 |       50 |     100 |     100 |                   
   ChooseTeam.tsx             |     100 |       50 |     100 |     100 | 20                
@@ -94,5 +94,5 @@ All files                    |   99.02 |    96.18 |     100 |      99 |
 Test Suites: 21 passed, 21 total
 Tests:       135 passed, 135 total
 Snapshots:   0 total
-Time:        11.152 s
+Time:        11 s
 Ran all test suites.
