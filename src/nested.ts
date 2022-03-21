@@ -1,5 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+import { duplicateQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -43,8 +44,6 @@ export function findQuestion(
     if (quest) {
         return quest;
     } else if (!quest) {
-        return null;
-    } else {
         return null;
     }
     return null;
@@ -313,10 +312,7 @@ export function duplicateQuestionInArray(
     const index: number = temp.findIndex(
         (question: Question): boolean => question.id == targetId
     );
-    temp.splice(index + 1, 0, {
-        ...temp[index],
-        id: newId,
-        name: "Copy of " + temp[index].name
-    });
+    const togetherarr = duplicateQuestion(newId, temp[index]);
+    temp.splice(index + 1, 0, togetherarr);
     return temp;
 }
