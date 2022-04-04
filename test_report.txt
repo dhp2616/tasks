@@ -30,7 +30,8 @@ PASS src/App.test.tsx
           at span
           at html
           at div
-          at App
+          at div
+          at App (/home/runner/work/tasks/tasks/src/App.tsx:22:35)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -45,7 +46,8 @@ PASS src/App.test.tsx
       Warning: validateDOMNesting(...): <html> cannot appear as a child of <div>.
           at html
           at div
-          at App
+          at div
+          at App (/home/runner/work/tasks/tasks/src/App.tsx:22:35)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -59,9 +61,9 @@ PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   99.35 |    96.18 |     100 |   99.33 |                   
- src                         |   98.98 |     97.4 |     100 |   98.95 |                   
-  App.tsx                    |     100 |      100 |     100 |     100 |                   
+All files                    |   90.73 |     90.2 |   85.71 |   90.77 |                   
+ src                         |   98.49 |     96.2 |   98.71 |   98.44 |                   
+  App.tsx                    |   66.66 |       50 |      50 |   66.66 | 24                
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
   functions.ts               |     100 |      100 |     100 |     100 |                   
   nested.ts                  |   98.59 |    95.65 |     100 |   98.57 | 49                
@@ -87,12 +89,20 @@ All files                    |   99.35 |    96.18 |     100 |   99.33 |
  src/interfaces              |       0 |        0 |       0 |       0 |                   
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
- src/quizzer                 |     100 |      100 |     100 |     100 |                   
-  Quizzer.tsx                |     100 |      100 |     100 |     100 |                   
+  quiz.ts                    |       0 |        0 |       0 |       0 |                   
+ src/quiz-comp               |   26.66 |    33.33 |   28.57 |   26.66 |                   
+  Questioneditor.tsx         |       0 |      100 |       0 |       0 | 16-72             
+  Questionview.tsx           |   66.66 |       50 |      50 |   66.66 | 18                
+  Quizeditor.tsx             |       0 |        0 |       0 |       0 | 16-93             
+  Quizview.tsx               |   66.66 |       50 |      50 |   66.66 | 17                
+  questionlist.tsx           |     100 |      100 |     100 |     100 |                   
+  quizlist.tsx               |     100 |      100 |     100 |     100 |                   
+ src/quizzer                 |      50 |        0 |   27.27 |   53.33 |                   
+  Quizzer.tsx                |      50 |        0 |   27.27 |   53.33 | 25-42             
 -----------------------------|---------|----------|---------|---------|-------------------
 
 Test Suites: 21 passed, 21 total
 Tests:       135 passed, 135 total
 Snapshots:   0 total
-Time:        11 s
+Time:        12.702 s
 Ran all test suites.
