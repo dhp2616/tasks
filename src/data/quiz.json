@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Math Quiz",
+        "questions": 1,
+        "description": "You will be given a single question relating to Math, Goodluck...",
+        "id": "MATH_QUESTIONS"
+    },
+    {
+        "title": "Trivia Quiz",
+        "questions": 3,
+        "description": "You will be given 3 questions, ranging from greek mythology - 2022 oscars.",
+        "id": "Trivia_QUESTIONS"
+    },
+    {
+        "title": "Destiny 2 Quiz",
+        "questions": 1,
+        "description": "You will be given a single question relating to the game; Destiny 2.",
+        "id": "DESTINY_QUESTIONS"
+    }
+]
