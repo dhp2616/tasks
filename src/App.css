@@ -1,7 +1,14 @@
-.App {
+.Pwork {
     text-align: center;
+    margin: 20px;
+    border: 5px solid;
+    background-color: #fbd603;
 }
-
+.quizz {
+    margin: 2px;
+    border: 5px solid;
+    background-color: #fbd603;
+}
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -15,14 +22,15 @@
 
 .App-header {
     width: 100%;
-    background-color: #c74b70;
+    background-image: url(https://i.pinimg.com/originals/0a/63/03/0a6303d501bbeec85c115bb81493bfd8.jpg);
+    background-size: cover;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: #49001e;
+    color: #ffffff;
 }
 
 .App-link {
